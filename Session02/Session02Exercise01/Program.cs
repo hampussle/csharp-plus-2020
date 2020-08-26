@@ -8,7 +8,7 @@ namespace Session02Exercise01
         {
             Console.WriteLine("Hello World!");
 
-            var integer = 
+            var integer = 0;
             string stringValue = "MyStringValue";
 
             Console.WriteLine("Integer is " + integer.ToString());
