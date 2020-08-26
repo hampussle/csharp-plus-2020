@@ -13,7 +13,7 @@ namespace Session01_Example
             // This is a comment
 
             /* This is a multiline
-             * comment */
+               comment */
 
             int[] myArray = new int[] { 1, 2, 4, 5 };
 
