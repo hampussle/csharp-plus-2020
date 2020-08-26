@@ -8,8 +8,10 @@ namespace Session02Exercise01
         {
             Console.WriteLine("Hello World!");
 
+            var integer = 
             string stringValue = "MyStringValue";
 
+            Console.WriteLine("Integer is " + integer.ToString());
             Console.WriteLine("The value of stringValue is: " + stringValue);
         }
     }
