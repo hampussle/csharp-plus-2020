@@ -14,6 +14,7 @@ namespace Session03Exercise02
             foreach (var number in inputArray)
             {
                 Console.WriteLine("Värdet är " + number);
+                Console.ReadLine();
             }
         }
     }
