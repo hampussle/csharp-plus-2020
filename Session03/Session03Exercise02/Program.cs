@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Session03Exercise02
 {
@@ -6,10 +7,10 @@ namespace Session03Exercise02
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Ange ett antal siffror, separerat med kommatecken. ");
+            Console.WriteLine("Enter a few numbers, separated by a comma.");
             var input = Console.ReadLine();
             var inputArray = input.Split(",", StringSplitOptions.RemoveEmptyEntries);
-            double?[] numberArray = new double?[inputArray.Length];
+            double[] numberArray = new double[inputArray.Length];
 
             //konvertera sträng till int och spara i array
             for (var i = 0; i < inputArray.Length; i++)
@@ -20,17 +21,29 @@ namespace Session03Exercise02
                 }
                 catch(Exception)
                 {
-                    Console.WriteLine("Misslyckat");
+                    Console.WriteLine("Failed input");
                 }
             }
 
             //skriv ut resultat
+            /*
             for (var i = 0; i < numberArray.Length; i++)
             {
-                Console.WriteLine(numberArray[i]);
+                Console.Write($"{numberArray[i]} ");
             }
-            //Console.WriteLine("Största nummer: " + Math.Ceiling(numberArray));
-            //Console.WriteLine("Minsta nummer: " + Math.Floor(numberArray));
+            */
+            
+            int largestNumber1 = (int)numberArray.Max();
+            int smallestNumber1 = (int)numberArray.Min();
+            int averageValue = (int)numberArray.Sum() / numberArray.Length;
+
+
+            //int largestNumber = (int)Math.Ceiling(numberArray[]);
+            //int smallestNumber = (int)Math.Floor(numberArray[]);
+
+            Console.WriteLine($"\nLargest Number: {largestNumber1}");
+            Console.WriteLine($"Smallest Number: {smallestNumber1}");
+            Console.WriteLine($"Average: {averageValue}");
         }
     }
 }
